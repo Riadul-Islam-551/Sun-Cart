@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "UV Protection Sunglasses",
+    "brand": "SunShade",
+    "price": 15,
+    "rating": 4.7,
+    "stock": 10,
+    "description": "Stay protected and stylish all summer long with these premium UV Protection Sunglasses from SunShade. Designed for bright sunny days, these lightweight sunglasses feature high-quality UV400 lenses that block harmful UVA and UVB rays while reducing glare for clearer outdoor vision. Whether you're relaxing on the beach, driving on a hot afternoon, enjoying a rooftop party, or heading out for a vacation, these sunglasses provide all-day comfort with their durable frame and soft nose support. The modern unisex design pairs effortlessly with casual summer outfits, making them a must-have seasonal accessory for both fashion and function.",
+    "image": "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "category": "Accessories"
+  },
+  {
+    "id": 2,
+    "name": "Men's Tropical Print Summer Shirt",
+    "brand": "OceanWear",
+    "price": 28,
+    "rating": 4.5,
+    "stock": 18,
+    "description": "Bring tropical vibes to your wardrobe with the Men's Tropical Print Summer Shirt from OceanWear. Crafted from a soft and breathable cotton-blend fabric, this shirt is designed to keep you cool and comfortable even during the hottest summer afternoons. Featuring a relaxed fit, short sleeves, and vibrant tropical leaf prints, it is the perfect choice for beach trips, summer vacations, casual hangouts, and outdoor parties. The lightweight material ensures maximum airflow while the stylish button-down design gives it a polished yet laid-back summer look. Pair it with shorts, chinos, or sandals for an effortlessly fresh seasonal outfit.",
+    "image": "https://images.unsplash.com/photo-1571434305870-0621521af411?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "category": "Clothing"
+  },
+  {
+    "id": 3,
+    "name": "Women's Summer Straw Hat",
+    "brand": "SunnyStyle",
+    "price": 20,
+    "rating": 4.8,
+    "stock": 14,
+    "description": "Complete your sunny-day look with the Women's Summer Straw Hat from SunnyStyle, designed to blend elegance, comfort, and sun protection in one timeless accessory. Made from lightweight woven straw material, this breathable hat features a wide brim that offers excellent shade for your face and neck, helping protect your skin from harsh summer sunlight. Perfect for beach outings, garden brunches, travel adventures, or poolside relaxation, this hat combines fashionable charm with practical comfort. Its classic silhouette and soft inner lining make it easy to wear for extended hours, while the versatile design complements dresses, swimsuits, and casual summer wear beautifully.",
+    "image": "https://images.unsplash.com/photo-1718909603336-62fb533e6027?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "category": "Accessories"
+  },
+  {
+    "id": 4,
+    "name": "Beach Slide Sandals",
+    "brand": "WaveWalk",
+    "price": 18,
+    "rating": 4.4,
+    "stock": 25,
+    "description": "Step into effortless summer comfort with the Beach Slide Sandals by WaveWalk. Designed for easy everyday wear, these lightweight sandals feature a cushioned sole and soft upper strap that provide superior comfort whether you're heading to the beach, walking by the pool, running errands, or relaxing on vacation. The water-friendly construction makes them ideal for wet environments, while the anti-slip textured sole offers better grip on slippery surfaces. With their minimalist modern look and easy slip-on design, these sandals are the perfect blend of convenience, durability, and warm-weather style for anyone looking to stay cool and comfortable all season long.",
+    "image": "https://images.unsplash.com/photo-1679319109465-c8cedc3057e1?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "category": "Footwear"
+  },
+  {
+    "id": 5,
+    "name": "Insulated Summer Water Bottle",
+    "brand": "CoolSip",
+    "price": 22,
+    "rating": 4.9,
+    "stock": 30,
+    "description": "Stay refreshed under the summer sun with the Insulated Summer Water Bottle from CoolSip. Built for active summer lifestyles, this sleek and durable stainless steel bottle is designed with double-wall vacuum insulation to keep your drinks cold for up to 24 hours, making it ideal for gym sessions, beach days, hiking adventures, travel, and office use. The leak-proof lid ensures mess-free portability, while the lightweight ergonomic design makes it easy to carry wherever your summer plans take you. Whether you're sipping ice-cold water, juice, or smoothies, this bottle helps you stay hydrated in style with a clean modern look and long-lasting performance.",
+    "image": "https://images.unsplash.com/photo-1679310289576-8e1b68b808ba?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "category": "Lifestyle"
+  },
+  {
+    "id": 6,
+    "name": "Portable Mini Hand Fan",
+    "brand": "BreezeGo",
+    "price": 12,
+    "rating": 4.6,
+    "stock": 22,
+    "description": "Beat the summer heat anytime and anywhere with the Portable Mini Hand Fan by BreezeGo. This compact and lightweight handheld fan is the perfect summer essential for commuting, traveling, outdoor events, shopping trips, and daily use in hot weather. Featuring a rechargeable battery and multiple wind speed settings, it delivers refreshing airflow whenever you need instant cooling. Its ergonomic grip makes it comfortable to hold, while the compact design easily fits in handbags, backpacks, or travel kits. Whether you're waiting outdoors, attending a summer festival, or dealing with hot indoor conditions, this mini fan offers reliable comfort and convenience in a portable design.",
+    "image": "https://images.unsplash.com/photo-1662808432302-72548880b4e3?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "category": "Electronics"
+  }
+]
