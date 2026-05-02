@@ -2,3 +2,9 @@
 @import "@heroui/styles"; 
 @plugin "daisyui";
 
+.footer-bg{
+    background-color: #070d20;
+}
+.secondary-text{
+    color: #cecece;
+}

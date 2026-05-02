@@ -1,5 +1,7 @@
 import { Button } from "@heroui/react";
+import Image from "next/image";
 import Link from "next/link";
+import logo from "../assets/logo.png";
 
 const Nav = () => {
   const links = (
@@ -45,7 +47,9 @@ const Nav = () => {
               {links}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <Link href="/">
+            <Image src={logo} alt="Logo" width={100} height={100} />
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
