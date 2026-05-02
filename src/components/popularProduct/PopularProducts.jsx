@@ -5,7 +5,7 @@ import ProductCard from "./ProductCard";
 
 const PopularProducts = async () => {
   const popularProducts = await getProducts();
-  console.log(popularProducts);
+  // console.log(popularProducts);
   return (
     <div className="max-w-300 mx-auto">
       <h1 className="text-2xl text-center font-bold md:text-3xl lg:text-4xl">

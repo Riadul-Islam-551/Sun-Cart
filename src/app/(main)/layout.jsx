@@ -2,7 +2,7 @@ import Banner from "@/components/Banner";
 import Brands from "@/components/Brands";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
-import PopularProducts from "@/components/product/PopularProducts";
+import PopularProducts from "@/components/popularProduct/PopularProducts";
 import SkinCareTips from "@/components/skinCareTips/SkinCareTips";
 import React from "react";
 

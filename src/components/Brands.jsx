@@ -9,8 +9,10 @@ import Image from "next/image";
 
 const Brands = () => {
   return (
-    <div className="my-12">
-        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center my-9">Top Brands</h1>
+    <div className="mt-12 mb-24 ">
+      <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center my-9">
+        Top Brands
+      </h1>
       <Marquee className=" rounded-3xl max-w-300  mx-auto">
         <Image
           src={Chenel}
@@ -20,8 +22,8 @@ const Brands = () => {
           height={200}
         />
         <Image
-          src={Hermes} 
-          alt="Hermes" 
+          src={Hermes}
+          alt="Hermes"
           className="mx-4"
           width={200}
           height={200}
