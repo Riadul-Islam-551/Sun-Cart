@@ -1,4 +1,5 @@
 import Banner from "@/components/Banner";
+import Brands from "@/components/Brands";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
 import PopularProducts from "@/components/product/PopularProducts";
@@ -12,6 +13,7 @@ const layout = ({ children }) => {
       <Banner></Banner>
       <PopularProducts></PopularProducts>
       <SkinCareTips></SkinCareTips>
+      <Brands></Brands>
       {children}
       <Footer></Footer>
     </div>
