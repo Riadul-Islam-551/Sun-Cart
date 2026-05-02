@@ -3,6 +3,7 @@ import { Button } from "@heroui/react";
 import Image from "next/image";
 import React from "react";
 import { FaStar } from "react-icons/fa";
+import "animate.css";
 
 const ProductDetails = async ({ params }) => {
   const { id } = await params;
@@ -57,7 +58,7 @@ const ProductDetails = async ({ params }) => {
             <div className="text-lg font-bold text-muted flex justify-start items-center gap-2 my-6 md:my-8 lg:my-12 ">
               <FaStar className="text-warning" /> {rating}
             </div>
-            <div className=" ">
+            <div className="animate__animated animate__pulse animate__infinite">
               <Button className="font-bold w-full py-7 text-lg ">
                 Buy Now
               </Button>
@@ -66,7 +67,7 @@ const ProductDetails = async ({ params }) => {
         </div>
       </div>
       {/* description of product */}
-      <div className="container mx-auto py-12  ">
+      <div className="container mx-auto py-12 px-4  ">
         <h2 className="text-xl md:text-2xl mt-10 font-bold pb-4 border-b border-gray-300">
           Description
         </h2>
