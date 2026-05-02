@@ -6,16 +6,17 @@ import { FaFacebookSquare, FaInstagram, FaYoutube } from "react-icons/fa";
 const Footer = () => {
   return (
     <div className="footer-bg secondary-text">
-      <footer className="footer sm:footer-horizontal p-10 container mx-auto grid grid-cols-1 md:grid-cols-3">
-        <aside>
+      <footer className="footer p-10 container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-9 ">
+        <nav>
           <Image src={logo} alt="Logo" width={100} height={100} />
-          <p className="px-4">
+          <p className="text-justify">
             A modern summer eCommerce platform where users can explore and
             purchase seasonal products like sunglasses, summer outfits,
             skincare, beach accessories, and more. Users can browse products,
             view details, and place orders after authentication.
           </p>
-        </aside>
+        </nav>
+
         {/* contact info  */}
         <nav>
           <h6 className=" text-accent text-2xl font-bold">Contact Info</h6>
