@@ -28,12 +28,14 @@ const ProductCard = ({ product }) => {
         </Card.Header>
         <Card.Footer className="mt-auto flex w-full flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex flex-col">
+            {/* price of product  */}
             <span className="text-sm font-medium text-foreground">
               Price:{" "}
               <span className="font-bold hover:text-warning duration-150">
                 ${price}
               </span>
             </span>
+            {/* rating  of product */}
             <span className="text-xs text-muted flex justify-start items-center gap-2">
               <FaStar className="text-warning" /> {rating}
             </span>
