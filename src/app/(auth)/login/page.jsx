@@ -10,13 +10,15 @@ import {
   TextField,
 } from "@heroui/react";
 import Image from "next/image";
-import React from "react";
-import { FaCheck } from "react-icons/fa";
+import React, { useState } from "react";
+import { FaCheck, FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import loginLogo from "../../../assets/login-logo.png";
 import { authClient } from "@/lib/auth-client";
 import { toast, ToastContainer } from "react-toastify";
 
 const LoginPage = () => {
+  const [showPassword, setShowPassword] = useState(true);
+
   const handleLoginSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
@@ -75,7 +77,8 @@ const LoginPage = () => {
           isRequired
           minLength={8}
           name="password"
-          type="password"
+          type={showPassword ? "text" : "password"}
+          className="relative"
           validate={(value) => {
             if (value.length < 8) {
               return "Password must be at least 8 characters";
@@ -95,6 +98,13 @@ const LoginPage = () => {
             Must be at least 8 characters with 1 uppercase and 1 number
           </Description>
           <FieldError />
+          {/* show the password or hide the password  */}
+          <span
+            onClick={() => setShowPassword(!showPassword)}
+            className="absolute right-2 top-8.5  cursor-pointer text-gray-500"
+          >
+            {showPassword ? <FaRegEye /> : <FaRegEyeSlash />}
+          </span>
         </TextField>
         <div className="flex gap-2">
           <Button type="submit">

@@ -9,8 +9,8 @@ import { authClient } from "@/lib/auth-client";
 const Nav = () => {
   const { data: session, isPending } = authClient.useSession();
   const user = session?.user;
-  console.log(isPending, "session");
-  console.log(user, "session");
+  // console.log(isPending, "session");
+  // console.log(user, "session");
 
   const links = (
     <>
