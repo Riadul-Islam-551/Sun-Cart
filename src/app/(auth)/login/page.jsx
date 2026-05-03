@@ -13,14 +13,31 @@ import Image from "next/image";
 import React from "react";
 import { FaCheck } from "react-icons/fa";
 import loginLogo from "../../../assets/login-logo.png";
+import { authClient } from "@/lib/auth-client";
+import { toast, ToastContainer } from "react-toastify";
 
 const LoginPage = () => {
-  const handleLoginSubmit = (e) => {
+  const handleLoginSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const email = formData.get("email");
     const password = formData.get("password");
-    console.log({ email, password });
+    // console.log({ email, password });
+
+    const { data, error } = await authClient.signIn.email({
+      email: email,
+      password: password,
+      rememberMe: true,
+      callbackURL: "/",
+    });
+
+    if (error) {
+      toast.error("Login failed: " + error.message);
+    }
+
+    if (data) {
+      toast.success("Login successful!");
+    }
   };
 
   return (
@@ -97,6 +114,7 @@ const LoginPage = () => {
           </p>
         </div>
       </Form>
+      <ToastContainer />
     </div>
   );
 };

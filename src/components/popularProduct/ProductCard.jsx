@@ -9,7 +9,7 @@ const ProductCard = ({ product }) => {
     <Card className="group items-stretch md:flex-row bg-base-200 cursor-pointer hover:bg-base-300 transition-colors duration-200 ">
       <div className="relative h-35 w-full shrink-0 overflow-hidden rounded-2xl sm:h-30 sm:w-30">
         <Image
-          alt="Cherries"
+          alt={name}
           className="pointer-events-none absolute inset-0 h-full w-full object-cover select-none group-hover:scale-110 transition-all duration-300"
           loading="lazy"
           src={image}

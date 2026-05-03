@@ -1,9 +1,17 @@
-import { Button } from "@heroui/react";
+"use client";
+
+import { Button, Spinner } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../assets/logo.png";
+import { authClient } from "@/lib/auth-client";
 
 const Nav = () => {
+  const { data: session, isPending } = authClient.useSession();
+  const user = session?.user;
+  console.log(isPending, "session");
+  console.log(user, "session");
+
   const links = (
     <>
       <li>
@@ -54,13 +62,37 @@ const Nav = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
+        {/* button and user info  */}
+
         <div className="navbar-end space-x-2">
-          <Button variant="tertiary">
-            <Link href="/login">Log in</Link>
-          </Button>
-          <Button variant="secondary">
-            <Link href="/register">Register</Link>
-          </Button>
+          {isPending ? (
+            <Spinner className="mr-3 "/>
+            
+          ) : user ? (
+            <div className="flex justify-center items-center">
+              <Image
+                src={user.image}
+                alt={user.name}
+                height={60}
+                width={60}
+                className="rounded-full"
+                title={user.name}
+              />
+              <Button variant="secondary">
+                <Link href="/">Log out</Link>
+              </Button>
+            </div>
+          ) : (
+            <div className="space-x-2 ">
+              {" "}
+              <Button variant="tertiary">
+                <Link href="/login">Log in</Link>
+              </Button>
+              <Button variant="secondary">
+                <Link href="/register">Register</Link>
+              </Button>
+            </div>
+          )}
         </div>
       </div>
     </div>
