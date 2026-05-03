@@ -10,13 +10,15 @@ import {
   TextField,
 } from "@heroui/react";
 import Image from "next/image";
-import React from "react";
-import { FaCheck } from "react-icons/fa";
+import React, { useState } from "react";
+import { FaCheck, FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import registrationLogo from "../../../assets/registration-logo.png";
 import { authClient } from "@/lib/auth-client";
 import { ToastContainer, toast } from "react-toastify";
 
 const RegisterPage = () => {
+  const [showPassword, setShowPassword] = useState(true);
+
   const handleRegistrationSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
@@ -35,7 +37,7 @@ const RegisterPage = () => {
       callbackURL: "/",
     });
 
-    console.log({ data, error });
+    // console.log({ data, error });
 
     if (error) {
       toast.error("Registration failed: " + error.message);
@@ -102,7 +104,8 @@ const RegisterPage = () => {
           isRequired
           minLength={8}
           name="password"
-          type="password"
+          type={showPassword ? "text" : "password"}
+          className="relative"
           validate={(value) => {
             if (value.length < 8) {
               return "Password must be at least 8 characters";
@@ -122,7 +125,16 @@ const RegisterPage = () => {
             Must be at least 8 characters with 1 uppercase and 1 number
           </Description>
           <FieldError />
+          {/* show the password or hide the password  */}
+          <span
+            onClick={() => setShowPassword(!showPassword)}
+            className="absolute right-2 top-8.5  cursor-pointer text-gray-500"
+          >
+            {showPassword ?<FaRegEye />:<FaRegEyeSlash /> }
+          </span>
         </TextField>
+
+        {/* submit button  */}
         <div className="flex gap-2">
           <Button type="submit">
             <FaCheck />
