@@ -17,7 +17,7 @@ import { authClient } from "@/lib/auth-client";
 import { toast, ToastContainer } from "react-toastify";
 
 const LoginPage = () => {
-  const [showPassword, setShowPassword] = useState(true);
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleLoginSubmit = async (e) => {
     e.preventDefault();
@@ -103,7 +103,7 @@ const LoginPage = () => {
             onClick={() => setShowPassword(!showPassword)}
             className="absolute right-2 top-8.5  cursor-pointer text-gray-500"
           >
-            {showPassword ? <FaRegEye /> : <FaRegEyeSlash />}
+            {showPassword ? <FaRegEyeSlash /> : <FaRegEye />}
           </span>
         </TextField>
         <div className="flex gap-2">

@@ -17,7 +17,7 @@ import { authClient } from "@/lib/auth-client";
 import { ToastContainer, toast } from "react-toastify";
 
 const RegisterPage = () => {
-  const [showPassword, setShowPassword] = useState(true);
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleRegistrationSubmit = async (e) => {
     e.preventDefault();
@@ -130,7 +130,7 @@ const RegisterPage = () => {
             onClick={() => setShowPassword(!showPassword)}
             className="absolute right-2 top-8.5  cursor-pointer text-gray-500"
           >
-            {showPassword ?<FaRegEye />:<FaRegEyeSlash /> }
+            {showPassword ? <FaRegEyeSlash /> : <FaRegEye />}
           </span>
         </TextField>
 

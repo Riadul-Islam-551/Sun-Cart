@@ -66,8 +66,7 @@ const Nav = () => {
 
         <div className="navbar-end space-x-2">
           {isPending ? (
-            <Spinner className="mr-3 "/>
-            
+            <Spinner className="mr-3 " />
           ) : user ? (
             <div className="flex justify-center items-center">
               <Image
@@ -79,7 +78,9 @@ const Nav = () => {
                 title={user.name}
               />
               <Button variant="secondary">
-                <Link href="/">Log out</Link>
+                <Link href="/" onClick={async () => await authClient.signOut()}>
+                  Log out
+                </Link>
               </Button>
             </div>
           ) : (
