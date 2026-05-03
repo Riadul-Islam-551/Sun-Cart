@@ -13,9 +13,11 @@ import Image from "next/image";
 import React from "react";
 import { FaCheck } from "react-icons/fa";
 import registrationLogo from "../../../assets/registration-logo.png";
+import { authClient } from "@/lib/auth-client";
+import { ToastContainer, toast } from "react-toastify";
 
 const RegisterPage = () => {
-  const handleRegistrationSubmit = (e) => {
+  const handleRegistrationSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const name = formData.get("name");
@@ -23,7 +25,24 @@ const RegisterPage = () => {
     const email = formData.get("email");
     const password = formData.get("password");
 
-    console.log({ name, image, email, password });
+    // console.log({ name, image, email, password });
+
+    const { data, error } = await authClient.signUp.email({
+      name: name,
+      email: email,
+      password: password,
+      image: image,
+      callbackURL: "/",
+    });
+
+    console.log({ data, error });
+
+    if (error) {
+      toast.error("Registration failed: " + error.message);
+    }
+    if (data) {
+      toast.success("Create account successfully! ");
+    }
   };
 
   return (
@@ -122,6 +141,7 @@ const RegisterPage = () => {
           </p>
         </div>
       </Form>
+      <ToastContainer />
     </div>
   );
 };
