@@ -89,7 +89,11 @@ const LoginPage = () => {
           </Button>
         </div>
         <div>
+<<<<<<< HEAD
           <p className="text-center">
+=======
+          <p>
+>>>>>>> 2031fdc276bd4e7eb7ea81551956a7ba8712c544
             Don&apos;t have an account?{" "}
             <a href="/register" className="text-red-500 text-sm">
               Register
