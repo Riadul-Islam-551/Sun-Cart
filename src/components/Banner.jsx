@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Button } from "@heroui/react";
 import { FaPlus } from "react-icons/fa";
 import "animate.css";
+import Link from "next/link";
 
 const Banner = () => {
   return (
@@ -41,7 +42,7 @@ const Banner = () => {
               <FaPlus />
               Add to Cart
             </Button>
-            <Button>See the products</Button>
+            <Button><Link href="/products">See the products</Link></Button>
           </div>
         </div>
       </div>
