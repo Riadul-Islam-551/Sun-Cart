@@ -68,7 +68,7 @@ const Nav = () => {
           {isPending ? (
             <Spinner className="mr-3 " />
           ) : user ? (
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center gap-2 ">
               <Image
                 src={user.image}
                 alt={user.name}

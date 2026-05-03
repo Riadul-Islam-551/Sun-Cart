@@ -9,7 +9,7 @@ import React from "react";
 const MyProfilePage = () => {
   const { data: session } = authClient.useSession();
   const user = session?.user;
-  console.log(user, "session");
+  // console.log(user, "session");
   return (
     <div className="min-h-[80vh]">
       <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center my-12">
@@ -22,7 +22,7 @@ const MyProfilePage = () => {
             alt={user.name}
             width={600}
             height={600}
-            className="w-[300px]"
+            className="w-[300px] rounded-2xl mb-6"
           />
           <h2>
             Name:{" "}
