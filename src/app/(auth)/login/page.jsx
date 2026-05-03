@@ -15,12 +15,20 @@ import { FaCheck } from "react-icons/fa";
 import loginLogo from "../../../assets/login-logo.png";
 
 const LoginPage = () => {
+  const handleLoginSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const email = formData.get("email");
+    const password = formData.get("password");
+    console.log({ email, password });
+  };
+
   return (
     <div className="flex justify-center items-center h-[80vh] bg-base-200 ">
       <Form
-        className="flex w-100 flex-col gap-4 border border-gray-300 p-4 rounded-2xl shadow-lg bg-transparent "
+        className="flex w-100 flex-col gap-4 border border-gray-300 p-4 rounded-2xl shadow-lg bg-transparent mx-2 "
         render={(props) => <form {...props} data-custom="foo" />}
-        // onSubmit={onSubmit}
+        onSubmit={handleLoginSubmit}
       >
         <Image
           src={loginLogo}
@@ -77,6 +85,14 @@ const LoginPage = () => {
           <Button type="reset" variant="secondary">
             Reset
           </Button>
+        </div>
+        <div>
+          <p>
+            Don&apos;t have an account?{" "}
+            <a href="/register" className="text-red-500 text-sm">
+              Register
+            </a>
+          </p>
         </div>
       </Form>
     </div>
