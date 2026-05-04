@@ -56,73 +56,95 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-[80vh] bg-base-200 ">
-      <Form
-        className="flex w-100 flex-col gap-4 border border-gray-300 p-4 rounded-2xl shadow-lg bg-transparent mx-2 "
-        render={(props) => <form {...props} data-custom="foo" />}
-        onSubmit={handleLoginSubmit}
-      >
-        <Image
-          src={loginLogo}
-          alt="Login Logo"
-          width={600}
-          height={600}
-          className="w-10/12 mx-auto rounded-xl mb-12  "
-        />
-        {/* email field  */}
-        <TextField
-          isRequired
-          name="email"
-          type="email"
-          validate={(value) => {
-            if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)) {
-              return "Please enter a valid email address";
-            }
-            return null;
-          }}
+    <div className="flex justify-center items-center flex-col bg-base-200 min-h-[80vh] ">
+      <div className=" border border-gray-300 p-4 rounded-2xl shadow-lg bg-transparent mx-2">
+        <Form
+          className="flex w-100 flex-col gap-4  "
+          render={(props) => <form {...props} data-custom="foo" />}
+          onSubmit={handleLoginSubmit}
         >
-          <Label>Email</Label>
-          <Input placeholder="Enter your email" />
-          <FieldError />
-        </TextField>
-        {/* password field   */}
-        <TextField
-          isRequired
-          minLength={8}
-          name="password"
-          type={showPassword ? "text" : "password"}
-          className="relative"
-          validate={(value) => {
-            if (value.length < 8) {
-              return "Password must be at least 8 characters";
-            }
-            if (!/[A-Z]/.test(value)) {
-              return "Password must contain at least one uppercase letter";
-            }
-            if (!/[0-9]/.test(value)) {
-              return "Password must contain at least one number";
-            }
-            return null;
-          }}
-        >
-          <Label>Password</Label>
-          <Input placeholder="Enter your password" />
-          <Description>
-            Must be at least 8 characters with 1 uppercase and 1 number
-          </Description>
-          <FieldError />
-          {/* show the password or hide the password  */}
-          <span
-            onClick={() => setShowPassword(!showPassword)}
-            className="absolute right-2 top-8.5  cursor-pointer text-gray-500"
+          <Image
+            src={loginLogo}
+            alt="Login Logo"
+            width={600}
+            height={600}
+            className="w-10/12 mx-auto rounded-xl mb-12  "
+          />
+          {/* email field  */}
+          <TextField
+            isRequired
+            name="email"
+            type="email"
+            validate={(value) => {
+              if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)) {
+                return "Please enter a valid email address";
+              }
+              return null;
+            }}
           >
-            {showPassword ? <FaRegEyeSlash /> : <FaRegEye />}
-          </span>
-        </TextField>
+            <Label>Email</Label>
+            <Input placeholder="Enter your email" />
+            <FieldError />
+          </TextField>
+          {/* password field   */}
+          <TextField
+            isRequired
+            minLength={8}
+            name="password"
+            type={showPassword ? "text" : "password"}
+            className="relative"
+            validate={(value) => {
+              if (value.length < 8) {
+                return "Password must be at least 8 characters";
+              }
+              if (!/[A-Z]/.test(value)) {
+                return "Password must contain at least one uppercase letter";
+              }
+              if (!/[0-9]/.test(value)) {
+                return "Password must contain at least one number";
+              }
+              return null;
+            }}
+          >
+            <Label>Password</Label>
+            <Input placeholder="Enter your password" />
+            <Description>
+              Must be at least 8 characters with 1 uppercase and 1 number
+            </Description>
+            <FieldError />
+            {/* show the password or hide the password  */}
+            <span
+              onClick={() => setShowPassword(!showPassword)}
+              className="absolute right-2 top-8.5  cursor-pointer text-gray-500"
+            >
+              {showPassword ? <FaRegEyeSlash /> : <FaRegEye />}
+            </span>
+          </TextField>
+
+          {/* submit and reset button  */}
+          <div className="flex gap-2">
+            <Button type="submit">
+              <FaCheck />
+              Submit
+            </Button>
+            <Button type="reset" variant="secondary">
+              Reset
+            </Button>
+          </div>
+          <div>
+            <p className="text-center">
+              Don&apos;t have an account?{" "}
+              <a href="/register" className="text-red-500 text-sm">
+                Register
+              </a>
+            </p>
+          </div>
+        </Form>
+        <ToastContainer />
         {/* google login button   */}
         <button
           onClick={handleGoogleSignin}
-          className="btn bg-white text-black border-[#e5e5e5]"
+          className="btn bg-white text-black border-[#e5e5e5] w-full mt-4"
         >
           <svg
             aria-label="Google logo"
@@ -153,26 +175,7 @@ const LoginPage = () => {
           </svg>
           Login with Google
         </button>
-        {/* submit and reset button  */}
-        <div className="flex gap-2">
-          <Button type="submit">
-            <FaCheck />
-            Submit
-          </Button>
-          <Button type="reset" variant="secondary">
-            Reset
-          </Button>
-        </div>
-        <div>
-          <p className="text-center">
-            Don&apos;t have an account?{" "}
-            <a href="/register" className="text-red-500 text-sm">
-              Register
-            </a>
-          </p>
-        </div>
-      </Form>
-      <ToastContainer />
+      </div>
     </div>
   );
 };

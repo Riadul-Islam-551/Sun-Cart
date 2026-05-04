@@ -10,12 +10,9 @@ export const getProducts = async () => {
 };
 
 export const getSkinCareTips = async () => {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/skinCare.json`,
-    {
-      cache: "no-store",
-    },
-  );
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/skinCare.json`, {
+    cache: "no-store",
+  });
 
   if (!res.ok) {
     throw new Error("Failed to fetch skin care tips");
