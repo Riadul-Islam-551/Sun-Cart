@@ -70,14 +70,16 @@ const Nav = () => {
             <Spinner className="mr-3 " />
           ) : user ? (
             <div className="flex justify-center items-center gap-2 ">
-              <Image
-                src={user.image}
-                alt={user.name}
-                height={60}
-                width={60}
-                className="rounded-full"
-                title={user.name}
-              />
+              <Link href="/profile">
+                <Image
+                  src={user.image}
+                  alt={user.name}
+                  height={60}
+                  width={60}
+                  className="rounded-full"
+                  title={user.name}
+                />
+              </Link>
               <Button variant="secondary">
                 <Link href="/" onClick={async () => await authClient.signOut()}>
                   Log out
