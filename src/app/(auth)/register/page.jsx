@@ -64,7 +64,7 @@ const RegisterPage = () => {
     <div className="flex justify-center items-center flex-col min-h-[80vh] bg-base-200">
       <div className=" border border-gray-300 p-4 rounded-2xl shadow-lg bg-transparent mx-2 my-12 ">
         <Form
-          className="flex w-100 flex-col gap-4  "
+          className="flex flex-col gap-4  "
           render={(props) => <form {...props} data-custom="foo" />}
           onSubmit={handleRegistrationSubmit}
         >
