@@ -47,11 +47,11 @@ const ProductDetails = async ({ params }) => {
               <Button variant="outline">Quantity : {stock}</Button>
             </div>
             {/* brands and category  */}
-            <div className="flex justify-between items-center gap-2 mt-3">
-              <div className="border w-full py-3 rounded-xl bg-orange-400 font-bold text-center text-base-100">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-2 mt-3">
+              <div className="border w-full py-2 md:py-3  rounded-xl bg-orange-400 font-bold text-center text-base-100">
                 Brand: {brand}
               </div>
-              <div className="border w-full py-3 rounded-xl bg-orange-400 font-bold text-center text-base-100">
+              <div className="border w-full py-2 md:py-3 rounded-xl bg-orange-400 font-bold text-center text-base-100">
                 Category: {category}
               </div>
             </div>
