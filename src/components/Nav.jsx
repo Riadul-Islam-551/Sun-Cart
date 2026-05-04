@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "../assets/logo.png";
 import { authClient } from "@/lib/auth-client";
+import NavLink from "./NavLink";
 
 const Nav = () => {
   const { data: session, isPending } = authClient.useSession();
@@ -15,13 +16,13 @@ const Nav = () => {
   const links = (
     <>
       <li>
-        <Link href="/">Home</Link>
+        <NavLink href="/">Home</NavLink>
       </li>
       <li>
-        <Link href="/products">Products</Link>
+        <NavLink href="/products">Products</NavLink>
       </li>
       <li>
-        <Link href="/profile">My Profile</Link>
+        <NavLink href="/profile">My Profile</NavLink>
       </li>
     </>
   );
