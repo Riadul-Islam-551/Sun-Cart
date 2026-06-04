@@ -1,4 +1,4 @@
-# SunCart
+# SunCart - Find Your Simmer Fashion
 
 SunCart is a modern, responsive Next.js e-commerce storefront built to showcase eyewear, summer products, and skincare tips. The application includes product browsing, detailed product pages, authentication, user profiles, and profile updates.
 
